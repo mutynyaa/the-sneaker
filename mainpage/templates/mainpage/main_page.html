@@ -1,0 +1,72 @@
+{% extends 'mainpage/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+	<div class="side-back d-none">
+		{{ posts }}
+	</div>
+	<div class="section_top">
+		<img src='{% static "img/slide_1.jpg" %}' class="img-responsive">
+	</div>
+	<div class="section">
+		<div class="container">
+			<div align="center"></p><h4>Всегда в тренде</h4></div>
+			<div class="row">
+				{% for product_image in products_images %}
+				<div class="col-lg-3">
+					<div class="product-item">
+						<div>
+							<a href="{% url 'product' product_image.product.id %}">
+							<img src="{{ product_image.image.url}}" class="img-responsive" height="200px" width="200px">
+							</a>
+						</div>
+						{% if product_image.product.discount %}
+							<div class="discount_container">
+								<snan> -{{ product_image.product.discount }}%</snan>
+							</div>
+						{% endif %}
+						<h4>{{ product_image.product.name }}</h4>
+
+						<p>
+							{{ product_image.product.description | truncatechars_html:0 }}
+						</p>
+						<div class="price_block">
+							<b>{{ product_image.product.price }} руб.</b>
+						</div>
+						<div class="add-to-card-btn">
+							<button class="btn btn-secondary">
+								Добавить в корзину
+							</button>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<hr />
+
+
+<div class="container">
+	<div class="section">
+		<div class="row">
+			{% for post in posts %}
+			<div class="col-lg-6 post-image">
+				<h2>{{ post.title }}</h2>
+				<img src="{{ post.image.url }}" class="w-100 img">
+				<button class="post-btn">Подробнее &#10155;</button>
+				<p class="post-text">{{ post.text }}</p>
+				<b><h3 class="post-price">{{ post.price }} &#8381;</h3></b>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+
+
+
+{% endblock content%}
+

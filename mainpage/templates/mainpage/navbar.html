@@ -1,0 +1,41 @@
+
+<nav class="navbar navbar-default navbar-top">
+  <span> <b>Есть вопрос? Позвоните по номеру: +7-(913)-874-64-19</b></span> <span> Site fo Zulmar </span>
+</nav>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <a class="navbar-brand" href="{% url 'mainpage' %}">The Sneaker</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0">
+
+    </form>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <li class="nav-item active">
+        <a class="nav-link" href="{% url 'admin:index' %}">Войти </a>
+      </li>
+        <div class="basket-container">
+        <a class="nav-link" href="#">Корзина<span id="basket_total_nmb"> </span></a>
+          <div class="basket-items d-none">
+            <ul class="">
+              <div class="hidden-basket"> Ваша корзина пуста :(</div>
+            </ul>
+        </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<marquee bgcolor="white" scrollamount="8">
+			Весь декабрь скидка 5% на всё!
+			</marquee>

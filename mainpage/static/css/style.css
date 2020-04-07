@@ -1,0 +1,34 @@
+
+html{
+    height:;
+    max-height:;
+    font-family:'Roboto', sans-serif;
+    background-color:#edeef0;
+}
+
+.section_top{
+    margin:20px;
+
+}
+
+.product-item{
+    height:400px;
+    position:relative;
+    background-color:white;
+    border: 1px solid lightgrey;
+    padding:5px;
+    text-align:center;
+}
+
+.add-to-card-btn{
+    position:absolute;
+    right:0;
+    left:0;
+    bottom:5px;
+}
+
+.discount_container{
+    position:absolute;
+    top:10%;
+
+}
